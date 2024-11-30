@@ -147,47 +147,77 @@ void student5scores(double student5[], string studentName[], int studenIndex)
 }
 double getAvg1(double student1[])
 {
+  int lowest = student1[0];
+    for (int i = 1; i < TESTS; i++)
+      {
+        if (student1[i] < lowest) 
+          lowest = student1[i]; //calculates the lowest grade
+      }
     double total = 0;
   double avg;
   for (int i = 0; i < 4; ++i)
       total += student1[i];
-    avg = total/4;
+    avg = (total - lowest) /3; // Removes lowest grade when calculating avg
     return avg;
 }
 double getAvg2(double student2[])
 {
+  int lowest = student2[0];
+    for (int i = 1; i < TESTS; i++)
+      {
+        if (student2[i] < lowest)
+          lowest = student2[i]; //calculates the lowest grade
+      }
     double total = 0;
   double avg;
   for (int i = 0; i < 4; ++i)
       total += student2[i];
-    avg = total/4;
+    avg = (total - lowest) /3; // Removes lowest grade when calculating avg
     return avg;
 }
 double getAvg3(double student3[])
 {
+  int lowest = student3[0];
+    for (int i = 1; i < TESTS; i++)
+      {
+        if (student3[i] < lowest)
+          lowest = student3[i]; //calculates the lowest grade
+      }  
     double total = 0;
   double avg;
   for (int i = 0; i < 4; ++i)
       total += student3[i];
-    avg = total/4;
+    avg = (total - lowest) /3; // Removes lowest grade when calculating avg
     return avg;
 }
 double getAvg4(double student4[])
 {
+  int lowest = student4[0];
+    for (int i = 1; i < TESTS; i++)
+      {
+        if (student4[i] < lowest)
+          lowest = student4[i]; //calculates the lowest grade
+      }
     double total = 0;
   double avg;
   for (int i = 0; i < 4; ++i)
       total += student4[i];
-    avg = total/4;
+    avg = (total - lowest) /3; // Removes lowest grade when calculating avg
     return avg;
 }
 double getAvg5(double student5[])
 {
+  int lowest = student5[0];
+    for (int i = 1; i < TESTS; i++)
+      {
+        if (student5[i] < lowest)
+          lowest = student5[i];
+      }
     double total = 0;
   double avg;
   for (int i = 0; i < 4; ++i)
       total += student5[i];
-    avg = total/4;
+    avg = (total - lowest) /3;
     return avg;
 }
 char getLetterGrade(double avg) {
